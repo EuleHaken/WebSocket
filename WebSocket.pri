@@ -10,7 +10,8 @@ SOURCES += \
     $$SRC_DIR/WebSocket.cpp \
     $$SRC_DIR/IrcMessage.cpp \
     $$SRC_DIR/PrivmsgMessage.cpp \
-    $$SRC_DIR/UsernoticeMessage.cpp
+    $$SRC_DIR/UsernoticeMessage.cpp \
+    $$SRC_DIR/ClearchatMessage.cpp
 
 HEADERS += \
     $$HEADER_DIR/WebSocket_global.hpp \
@@ -18,4 +19,5 @@ HEADERS += \
     $$HEADER_DIR/IrcMessage.hpp \
     $$HEADER_DIR/CommandHandler.hpp \
     $$HEADER_DIR/PrivmsgMessage.hpp \
-    $$HEADER_DIR/UsernoticeMessage.hpp
+    $$HEADER_DIR/UsernoticeMessage.hpp \
+    $$HEADER_DIR/ClearchatMessage.hpp
