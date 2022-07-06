@@ -17,4 +17,5 @@ Recommended way:
         ```
 * Now, open up your `YOUR_PROJECT.pro` file
 * Add this somewhere: `include(libs/WebSocket.pri)`
+
 **If you have any issues or questions, you can create an issue here at any time**
