@@ -9,8 +9,12 @@ Recommended way:
         git submodules init
         git submodules add https://github.com/EuleHaken/WebSocket.git
     ```
-* Optionally, you can create a file, named, e.g. `WebSocket.pri` inside your `libs/` folder
+* Create a file named, e.g. `WebSocket.pri` inside your `libs/` folder
+    * That file should contain this code (you can change the `WEBSOCKET_NAMESPACE` to whatever you want):
+        ```
+        DEFINES += WEBSOCKET_NAMESPACE=EuleHaken
+        include(../libs/WebSocket/WebSocket.pri)
+        ```
 * Now, open up your `YOUR_PROJECT.pro` file
 * Add this somewhere: `include(libs/WebSocket.pri)`
-* In that `.pri` file, you can define your wanted namespace
-* Example: (put this in your `libs/WebSocket.pri` file) `DEFINES += WEBSOCKET_NAMESPACE YOUR_WANTED_NAMESPACE`
+**If you have any issues or questions, you can create an issue here at any time**
