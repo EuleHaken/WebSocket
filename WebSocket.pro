@@ -3,7 +3,6 @@ QT += core websockets
 
 TEMPLATE = lib
 DEFINES += WEBSOCKET_LIBRARY
-DEFINES += WEBSOCKET_NAMESPACE EuleHaken::WebSocket # Default namespace, can be edited
 
 CONFIG += c++20
 
