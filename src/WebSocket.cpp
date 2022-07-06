@@ -44,7 +44,7 @@ void WebSocket::onIncomingMessage(const QString& message)
         {
             foreach (auto handler, handlers)
             {
-                handler->handle(this->_socket, parsedLine);
+                handler->handle(*this, parsedLine);
             }
         }
     }
