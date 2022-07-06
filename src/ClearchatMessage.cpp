@@ -1,0 +1,5 @@
+#include "ClearchatMessage.hpp"
+
+WEBSOCKET_BEGIN_NAMESPACE
+
+WEBSOCKET_END_NAMESPACE
