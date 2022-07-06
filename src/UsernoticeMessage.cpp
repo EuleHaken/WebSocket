@@ -9,9 +9,11 @@ UsernoticeMessage::UsernoticeMessage(IrcMessage& parent)
 
     this->_channel = parent.getParams().constFirst();
     this->_message = parent.getParams().constLast();
-    this->_user = parent.getTags().key("display-name", "");
+    this->_user = parent.getTags().value("display-name", "");
     this->_target =
-        parent.getTags().key("msg-param-recipient-display-name", "");
+        parent.getTags().value("msg-param-recipient-display-name", "");
+
+    // TODO add more, e.g. isPrime, streak/streakLength, isStreak, ... (see more in example_irc_messages.txt)
 }
 
 const QString& UsernoticeMessage::getChannel() const
