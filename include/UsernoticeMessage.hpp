@@ -5,7 +5,7 @@
 
 WEBSOCKET_BEGIN_NAMESPACE
 
-class UsernoticeMessage final : public IrcMessage
+class WEBSOCKET_EXPORT UsernoticeMessage final : public IrcMessage
 {
 public:
     UsernoticeMessage(IrcMessage& parent);
@@ -15,6 +15,7 @@ public:
     const QString& getMessage() const;
     const QString& getUser() const;
     const QString& getTarget() const;
+    const QString& getType() const;
 
 private:
     /**
@@ -39,6 +40,11 @@ private:
      * This could be someone gifting another user a subscription
      */
     QString _target;
+
+    /**
+     * @brief The type of the notice. E.g. subscription, announcement, ...
+     */
+    QString _type;
 };
 
 WEBSOCKET_END_NAMESPACE
