@@ -19,7 +19,7 @@ SOURCES += \
     $$SRC_DIR/WebSocket.cpp \
     $$SRC_DIR/IrcMessage.cpp \
     $$SRC_DIR/PrivmsgMessage.cpp \
-    $$SRC_DIR/src/UsernoticeMessage.cpp
+    $$SRC_DIR/UsernoticeMessage.cpp
 
 HEADERS += \
     $$HEADER_DIR/WebSocket_global.hpp \
