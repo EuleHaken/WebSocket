@@ -10,7 +10,7 @@ WEBSOCKET_BEGIN_NAMESPACE
 class WEBSOCKET_EXPORT CommandHandler
 {
 public:
-    virtual void handle(WebSocket& socket, const IrcMessage& message) = 0;
+    virtual void handle(WebSocket& socket, IrcMessage& message) = 0;
 };
 
 WEBSOCKET_END_NAMESPACE
