@@ -122,4 +122,12 @@ void WebSocket::setHandler(const QString& command, CommandHandler& handler)
     this->_commandHandlers[command].append(&handler);
 }
 
+void WebSocket::joinAll(const QStringList& channels)
+{
+    foreach (const QString& channel, channels)
+    {
+        this->sendRaw(QString("JOIN #%1").arg(channel));
+    }
+}
+
 WEBSOCKET_END_NAMESPACE

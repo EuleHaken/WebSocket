@@ -60,6 +60,17 @@ public:
 
     void setHandler(const QString& command, CommandHandler& handler);
 
+    //# @note Optional: This method should be called before connecting to host
+
+    /**
+     * @brief Will join all channels from provided list
+     * @param channels Channels to join
+     *
+     * Channels should not be prefixed with a `#`! This will happen inside the function
+     * already
+     */
+    void joinAll(const QStringList& channels);
+
 private slots:
     void onConnected();
     void onIncomingMessage(const QString& message);
