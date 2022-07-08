@@ -9,7 +9,7 @@
 
 WEBSOCKET_BEGIN_NAMESPACE
 
-class WEBSOCKET_EXPORT IrcMessage
+class IrcMessage
 {
 public:
     const QString& getRawMessage() const;

@@ -2,11 +2,13 @@
 
 #include <QtCore/qglobal.h>
 
+/*
 #if defined(WEBSOCKET_LIBRARY)
 #  define WEBSOCKET_EXPORT Q_DECL_EXPORT
 #else
 #  define WEBSOCKET_EXPORT Q_DECL_IMPORT
 #endif
+*/
 
 
 #ifdef WEBSOCKET_NAMESPACE

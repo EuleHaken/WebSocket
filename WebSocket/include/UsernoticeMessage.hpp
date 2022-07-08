@@ -5,7 +5,7 @@
 
 WEBSOCKET_BEGIN_NAMESPACE
 
-class WEBSOCKET_EXPORT UsernoticeMessage final : public IrcMessage
+class UsernoticeMessage final : public IrcMessage
 {
 public:
     UsernoticeMessage(IrcMessage& parent);

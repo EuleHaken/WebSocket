@@ -1,10 +1,11 @@
 #pragma once
 
 #include "IrcMessage.hpp"
+#include "WebSocket_global.hpp"
 
 WEBSOCKET_BEGIN_NAMESPACE
 
-class WEBSOCKET_EXPORT PrivmsgMessage final : public IrcMessage
+class PrivmsgMessage final : public IrcMessage
 {
 public:
     PrivmsgMessage(IrcMessage& parent);

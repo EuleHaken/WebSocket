@@ -7,7 +7,7 @@ WEBSOCKET_FORWARD_DECLARE_CLASS(WebSocket)
 
 WEBSOCKET_BEGIN_NAMESPACE
 
-class WEBSOCKET_EXPORT CommandHandler
+class CommandHandler
 {
 public:
     virtual void handle(WebSocket& socket, IrcMessage& message) = 0;

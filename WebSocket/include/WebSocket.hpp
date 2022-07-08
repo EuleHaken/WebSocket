@@ -12,7 +12,7 @@
 
 WEBSOCKET_BEGIN_NAMESPACE
 
-class WEBSOCKET_EXPORT WebSocket : public QObject
+class WebSocket : public QObject
 {
     Q_OBJECT
 

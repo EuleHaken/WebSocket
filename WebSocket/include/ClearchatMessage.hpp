@@ -5,7 +5,7 @@
 
 WEBSOCKET_BEGIN_NAMESPACE
 
-class WEBSOCKET_EXPORT ClearchatMessage final : public IrcMessage
+class ClearchatMessage final : public IrcMessage
 {
 public:
     ClearchatMessage(IrcMessage& parent);
