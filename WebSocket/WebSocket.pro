@@ -2,7 +2,7 @@ QT -= gui
 QT += core websockets
 
 TEMPLATE = lib
-DEFINES += WEBSOCKET_LIBRARY
+CONFIG += staticlib
 
 CONFIG += c++20
 
@@ -10,8 +10,8 @@ CONFIG += c++20
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
-SRC_DIR     = $$PWD/src
-HEADER_DIR  = $$PWD/include
+SRC_DIR     = src
+HEADER_DIR  = include
 
 INCLUDEPATH += $$SRC_DIR $$HEADER_DIR
 
@@ -33,6 +33,6 @@ HEADERS += \
 
 # Default rules for deployment.
 unix {
-    target.path = /usr/lib
+    target.path = $$[QT_INSTALL_PLUGINS]/generic
 }
 !isEmpty(target.path): INSTALLS += target
