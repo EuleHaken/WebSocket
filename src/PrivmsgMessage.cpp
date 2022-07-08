@@ -8,7 +8,7 @@ PrivmsgMessage::PrivmsgMessage(IrcMessage& parent)
     assert(parent.getCommand() == "PRIVMSG");
 
     this->_username = parent.getPrefix().split('!').constFirst();
-    this->_channel = parent.getParams().constLast();
+    this->_channel = parent.getParams().constFirst();
     this->_message = parent.getParams().constLast();
 }
 
