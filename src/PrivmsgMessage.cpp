@@ -5,6 +5,8 @@ WEBSOCKET_BEGIN_NAMESPACE
 PrivmsgMessage::PrivmsgMessage(IrcMessage& parent)
     : IrcMessage(parent)
 {
+    assert(parent.getCommand() == "PRIVMSG");
+
     this->_username = parent.getPrefix().split('!').constFirst();
     this->_channel = parent.getParams().constLast();
     this->_message = parent.getParams().constLast();
