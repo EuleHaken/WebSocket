@@ -5,6 +5,8 @@ CONFIG += console
 CONFIG -= app_bundle
 CONFIG += thread
 
+CONFIG += c++20
+
 SOURCES += \
         main.cpp         tst_testno1.cpp
 
