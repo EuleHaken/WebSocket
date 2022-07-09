@@ -4,6 +4,7 @@ C++ WebSocket library for QT Creator - for internal project EuleHakenBot mainly
 ## Use it yourself
 You can build the library by cloning this repo, opening the `WebSocket.pro` file (from top directory)
 with QT Creator, selecting `WebSocket` by right-clicking on it, and hitting `Build "WebSocket"`.
+Then, you can include the outcoming `.lib` file into your project.
 
 You can also add this the WebSocket library as a submodule, which is prefered from my side.
 This is possible by doing this:
