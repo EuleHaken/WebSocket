@@ -62,8 +62,8 @@ void WebSocket::onConnected()
     qInfo() << "connected!";
     this->_isConnected = true;
 
-    this->_write(QString("NICK %1").arg(this->_nick));
     this->_write(QString("PASS %1").arg(this->_pass));
+    this->_write(QString("NICK %1").arg(this->_nick));
     this->_write("CAP REQ :twitch.tv/commands twitch.tv/tags");
 
     if (!this->_messageQueue.empty())
