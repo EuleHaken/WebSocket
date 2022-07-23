@@ -71,6 +71,12 @@ public:
      */
     void joinAll(const QStringList& channels);
 
+    /**
+     * @brief join Joins a channel based on its name
+     * @param channel Name of channel to join (without `#` prefix!)
+     */
+    void join(const QString& channel);
+
 private slots:
     void onConnected();
     void onIncomingMessage(const QString& message);

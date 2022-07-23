@@ -145,4 +145,9 @@ void WebSocket::joinAll(const QStringList& channels)
     }
 }
 
+void WebSocket::join(const QString& channel)
+{
+    this->sendRaw(QString("JOIN #%1").arg(channel));
+}
+
 WEBSOCKET_END_NAMESPACE
