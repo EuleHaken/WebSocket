@@ -56,6 +56,13 @@ public:
      */
     void sendRaw(const QString& text);
 
+    /**
+     * @brief sendMessage sends a message to specified channel
+     * @param channel Channel to send message to
+     * @param message Message to send
+     */
+    void sendMessage(const QString& channel, const QString& message);
+
     QWebSocket& getSocket();
 
     void setHandler(const QString& command, std::shared_ptr<CommandHandler> handler);

@@ -111,6 +111,11 @@ void WebSocket::sendRaw(const QString& text)
     this->_write(text);
 }
 
+void WebSocket::sendMessage(const QString& channel, const QString& message)
+{
+    this->sendRaw(QString("PRIVMSG #%1 :%2").arg(channel).arg(message));
+}
+
 QWebSocket& WebSocket::getSocket()
 {
     return this->_socket;
