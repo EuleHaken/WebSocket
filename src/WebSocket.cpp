@@ -117,9 +117,20 @@ void WebSocket::connectToHost()
     this->_socket.open(this->_url);
 }
 
-void WebSocket::setHandler(const QString& command, CommandHandler& handler)
+void WebSocket::setHandler(const QString& command,
+                           std::shared_ptr<CommandHandler> handler)
 {
-    this->_commandHandlers[command].append(&handler);
+    if (this->_commandHandlers.contains(command))
+    {
+        this->_commandHandlers[command].append(handler);
+    }
+    else
+    {
+        QList<std::shared_ptr<CommandHandler>> list;
+        list << handler;
+
+        this->_commandHandlers.insert(command, list);
+    }
 }
 
 void WebSocket::joinAll(const QStringList& channels)
