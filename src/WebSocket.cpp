@@ -75,22 +75,22 @@ void WebSocket::onConnected()
     }
 }
 
-WebSocket* WebSocket::setNick(const QString& nick)
+WebSocket& WebSocket::setNick(const QString& nick)
 {
     this->_nick = nick;
-    return this;
+    return *this;
 }
 
-WebSocket* WebSocket::setPass(const QString& pass)
+WebSocket& WebSocket::setPass(const QString& pass)
 {
     this->_pass = (pass.startsWith("oauth:")) ? pass : "oauth:" + pass;
-    return this;
+    return *this;
 }
 
-WebSocket* WebSocket::setUrl(const QString& url)
+WebSocket& WebSocket::setUrl(const QString& url)
 {
     this->_url = QUrl(url);
-    return this;
+    return *this;
 }
 
 void WebSocket::sendRaw(const QString& text)
