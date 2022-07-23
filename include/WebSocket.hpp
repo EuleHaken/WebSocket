@@ -58,7 +58,7 @@ public:
 
     QWebSocket& getSocket();
 
-    void setHandler(const QString& command, CommandHandler& handler);
+    void setHandler(const QString& command, std::shared_ptr<CommandHandler> handler);
 
     //# @note Optional: This method should be called before connecting to host
 
@@ -89,7 +89,7 @@ private:
     QString _nick;
     QString _pass;
 
-    QHash<QString, QList<CommandHandler*>> _commandHandlers;
+    QMap<QString, QList<std::shared_ptr<CommandHandler>>> _commandHandlers;
 };
 
 WEBSOCKET_END_NAMESPACE
