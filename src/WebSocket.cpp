@@ -39,10 +39,14 @@ void WebSocket::onIncomingMessage(const QString& message)
             continue;
         }
 
-        QList handlers = this->_commandHandlers[command];
+        if (!this->_commandHandlers.contains(command))
+            continue;
+
+        //const auto& handlers = this->_commandHandlers[command];
+        const auto& handlers = this->_commandHandlers.value(command);
         if (!handlers.empty())
         {
-            foreach (auto handler, handlers)
+            foreach (const auto& handler, handlers)
             {
                 handler->handle(*this, parsedLine);
             }
