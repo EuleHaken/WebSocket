@@ -32,19 +32,19 @@ public:
      * @brief Sets the nickname (NICK) for the client
      * @param nick nickname
      */
-    WebSocket* setNick(const QString& nick);
+    WebSocket& setNick(const QString& nick);
 
     /**
      * @brief Sets the password (PASS) for the client
      * @param pass password
      */
-    WebSocket* setPass(const QString& pass);
+    WebSocket& setPass(const QString& pass);
 
     /**
      * @brief Sets the url we should connect to
      * @param url Url
      */
-    WebSocket* setUrl(const QString& url);
+    WebSocket& setUrl(const QString& url);
 
     /**
      * @brief Sends raw websocket/irc text/commands to the socket
